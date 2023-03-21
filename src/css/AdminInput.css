@@ -1,0 +1,41 @@
+.input-form{
+    display: table;
+    margin: auto;
+    margin-top: 100px;
+    border: solid 1px;
+    width: 800px;
+    height: 700px;
+}
+.house-label{
+    display: inline-block;
+    width: 90px;
+    margin-left: 30px;
+}
+.house-input{
+    display: inline-block;
+    height: 30px;
+    width: 200px;
+    margin-left: 40px;
+    margin-top: 70px;
+}
+.select-input{
+    display: inline-block;
+    height: 30px;
+    width: 200px;
+    margin-left: 40px;
+    margin-top: 70px;
+}
+.house-textarea{
+    display: inline-block;
+    height: 50px;
+    width: 200px;
+    margin-left: 40px;
+    margin-top: 70px;
+}
+.add-house-button{
+    display: table;
+    width: 70px;
+    height: 35px;
+    margin: auto;
+    margin-top: 60px;
+}

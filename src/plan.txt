@@ -1,0 +1,26 @@
+Homepage    
+    -navbar
+        -User Login
+        -Manager Login
+        -Broker Login
+
+Admin
+    -Add details
+    -Edit details
+    -delete details
+    -report of customer details
+
+manager
+    -add Maintanance rate according to the appartment and flat
+    -view the report of the maintanance received
+
+Broker
+    -select the area
+    -select the builders
+    -Block the houses from particular builders
+
+User
+    -Select Broker
+    -Select the area 
+    -select the builders
+    -confirm booking

@@ -1,0 +1,23 @@
+.register-form{
+    display:table;
+    margin: auto;
+    border:solid 1px;
+    width:400px;
+    height: 350px;
+}
+label.register-label{
+    display: inline-block;
+    width: 90px;
+}
+input.register-input{
+    display: inline-block;
+    height: 20px;
+    margin-left:40px;
+    margin-top: 60px;
+}
+
+input#register-submit{
+    display: table;
+    margin: auto;
+    margin-top: 40px;
+}
