@@ -1,0 +1,54 @@
+{
+  "House": [
+    {
+      "type": "1BHK",
+      "furnishedType": "Semi-Furnished",
+      "age": "3",
+      "ownerEmail": "divish@gmail.com",
+      "description": "Spacious house with good ambiance",
+      "category": "Rent",
+      "price": "15000",
+      "SqFeet": "900",
+      "imageUrl": "https://mediacdn.99acres.com/media1/20128/0/402560276M-1674029805699.jpg",
+      "area": "ECR",
+      "builder": "Casagrand",
+      "managerEmail": "Kavi@gmail.com",
+      "id": 1
+    },
+    {
+      "type": "2BHK",
+      "furnishedType": "Furnished",
+      "age": "5",
+      "ownerEmail": "Kabi@gmail.com",
+      "description": "Spacious house with good ambiance",
+      "category": "Sale",
+      "price": "500000",
+      "SqFeet": "1200",
+      "imageUrl": "https://mediacdn.99acres.com/media1/20128/0/402560276M-1674029805699.jpg",
+      "area": "OMR",
+      "builder": "Casagrand",
+      "managerEmail": "Kavi@gmail.com",
+      "id": 2
+    }
+  ],
+  "user": [
+    {
+      "email": "Divish@gmail.com",
+      "mobileNumber": "7904120417",
+      "password": "We!c0me1",
+      "id": 1
+    },
+    {
+      "email": "charan@gmail.com",
+      "mobileNumber": "9876543210",
+      "password": "We123fgvbuj",
+      "id": 2
+    },
+    {
+      "email": "kavi@gmail.con",
+      "mobileNumber": "6379259240",
+      "password": "KD@Tcsace.com",
+      "id": 3
+    }
+  ]
+}

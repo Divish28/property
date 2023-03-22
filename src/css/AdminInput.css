@@ -1,10 +1,10 @@
 .input-form{
     display: table;
     margin: auto;
-    margin-top: 100px;
+    margin-top: 50px;
     border: solid 1px;
     width: 800px;
-    height: 700px;
+    height: 810px;
 }
 .house-label{
     display: inline-block;

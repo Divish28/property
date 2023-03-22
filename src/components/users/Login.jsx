@@ -3,7 +3,6 @@ import { NavLink } from 'react-router-dom'
 import "../../css/login.css"
 
 const Login = () => {
-
   return (
     <div className='login'>
         <h1 className='login-heading'>Login</h1>
