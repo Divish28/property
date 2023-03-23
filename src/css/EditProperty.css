@@ -1,0 +1,50 @@
+.edit-input-form{
+    display: table;
+    margin: auto;
+    margin-top: 50px;
+    border: solid 1px;
+    width: 800px;
+    height: 810px;
+}
+.edit-house-label{
+    display: inline-block;
+    width: 90px;
+    margin-left: 30px;
+}
+.edit-house-input{
+    display: inline-block;
+    height: 30px;
+    width: 200px;
+    margin-left: 40px;
+    margin-top: 70px;
+}
+.edit-select-input{
+    display: inline-block;
+    height: 30px;
+    width: 200px;
+    margin-left: 40px;
+    margin-top: 70px;
+}
+.edit-house-textarea{
+    display: inline-block;
+    height: 50px;
+    width: 200px;
+    margin-left: 40px;
+    margin-top: 70px;
+}
+.cancel-edit-button{
+    display: inline-block;
+    width: 70px;
+    height: 35px;
+    margin: auto;
+    margin-top: 60px;
+    margin-left: 20px;
+}
+.edit-house-button{
+    display: inline-block;
+    width: 70px;
+    height: 35px;
+    margin: auto;
+    margin-top: 60px;
+    margin-right: 20px;
+}

@@ -4,6 +4,7 @@ import Login from './users/Login'
 import Register from './users/Register'
 import AdminAdd from './admin/AdminAdd'
 import PropertyList from './admin/PropertyList'
+import EditProperty from './admin/EditProperty'
 
 const Routing = () => {
   return (
@@ -14,6 +15,7 @@ const Routing = () => {
             <Route path='/Register' element={<Register/>}/>
             <Route path='/AdminAdd' element={<AdminAdd/>}/> 
             <Route path='/PropertyList' element={<PropertyList/>}/>
+            <Route path='/EditProperty/:id' element={<EditProperty/>}/>
         </Routes>
     </div>
   )
