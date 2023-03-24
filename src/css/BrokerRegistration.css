@@ -1,0 +1,23 @@
+.broker-register-form{
+    display:table;
+    margin: auto;
+    border:solid 1px;
+    width:400px;
+    height: 350px;
+}
+label.broker-register-label{
+    display: inline-block;
+    width: 90px;
+}
+input.broker-register-input{
+    display: inline-block;
+    height: 20px;
+    margin-left:40px;
+    margin-top: 60px;
+}
+
+input#broker-register-submit{
+    display: table;
+    margin: auto;
+    margin-top: 40px;
+}

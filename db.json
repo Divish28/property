@@ -27,27 +27,51 @@
       "imageUrl": "https://jumanji.livspace-cdn.com/magazine/wp-content/uploads/2018/12/22193120/2bhk-house-plan-living-room-sofa-light.jpg",
       "area": "OMR",
       "builder": "Casagrand",
-      "managerEmail": "Kavi@gmail.com",
+      "managerEmail": "Kabi@gmail.com",
       "id": 2
+    },
+    {
+      "type": "3BHK",
+      "furnishedType": "Semi-Furnished",
+      "age": "3",
+      "ownerEmail": "Gokul@gmail.com",
+      "description": "Spacious house with very good ventilation",
+      "category": "Rent",
+      "price": "30000",
+      "SqFeet": "1800",
+      "imageUrl": "https://5.imimg.com/data5/WR/QC/MY-13018244/3-bhk-new-flat-with-lowest-rent-at-vesu-vip-road-2c-surat-500x500.jpg",
+      "area": "ECR",
+      "builder": "Akshaya",
+      "managerEmail": "Charan@gmail.com",
+      "id": 3
     }
   ],
   "user": [
     {
-      "email": "Divish@gmail.com",
+      "email":"Admin@gmail.com",
+      "mobileNumber":"8056615848",
+      "password":"admin@property.com",
+      "role":"admin"
+    },
+    {
+      "email": "divish@gmail.com",
       "mobileNumber": "7904120417",
       "password": "We!c0me1",
+      "role": "user",
       "id": 1
     },
     {
-      "email": "charan@gmail.com",
-      "mobileNumber": "9876543210",
-      "password": "We123fgvbuj",
+      "email": "Gokul@gmail.com",
+      "mobileNumber": "9081212189",
+      "password": "Gokul@ACE@t0s1",
+      "role": "broker",
       "id": 2
     },
     {
-      "email": "kavi@gmail.con",
-      "mobileNumber": "6379259240",
-      "password": "KD@Tcsace.com",
+      "email": "Kavi@gmail.com",
+      "mobileNumber": "8065321763",
+      "password": "Ka^i@sctAce3",
+      "role": "user",
       "id": 3
     }
   ]

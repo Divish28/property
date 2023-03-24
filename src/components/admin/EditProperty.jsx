@@ -3,18 +3,15 @@ import React, { useEffect, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import "../../css/EditProperty.css"
 
-
-
-
 const EditProperty = () => {
 
     const[houseData,setHouseData] = useState({
-        type:undefined,
-        furnishedType:undefined,
+        type:"",
+        furnishedType:"",
         age:"",
         ownerEmail:"",
         description:"",
-        category:undefined,
+        category:"",
         price:"",
         SqFeet:"",
         imageUrl:"",
@@ -61,14 +58,14 @@ const EditProperty = () => {
         <form className='edit-input-form' >
             <label className='edit-house-label'>Type:</label>
             <select name='type' className='edit-select-input'onInput={handleChange} value={type}>
-                <option >--select Type--</option>
+                <option value="" disabled selected hidden >--select Type--</option>
                 <option>1BHK</option>
                 <option>2BHK</option>
                 <option>3BHK</option>
             </select>
             <label className='edit-house-label'>Furnished Type:</label>
             <select name='furnishedType' className='edit-select-input' onInput={handleChange} value={furnishedType} >
-                <option>--select Type--</option>
+                <option value="" disabled selected hidden>--select Type--</option>
                 <option>Furnished</option>
                 <option>Semi-Furnished</option>
             </select>
@@ -81,7 +78,7 @@ const EditProperty = () => {
             <textarea name='description' className='house-textarea' onInput={handleChange} value={description} placeholder='Decribe the house'/>
             <label className='edit-house-label'>Category:</label>
             <select name='category'onInput={handleChange} value={category} className='edit-select-input'>
-                <option>--select category--</option>
+                <option value="" disabled selected hidden>--select category--</option>
                 <option>Rent</option>
                 <option>Sale</option>
             </select>

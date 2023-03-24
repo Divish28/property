@@ -21,17 +21,14 @@ const PropertyList = () => {
 
   const deleteHouse =async (id) =>{
     await axios.delete(`http://localhost:8000/House/${id}`)
-  }
-
-  const handleDelete = async(id)=>{
-    await deleteHouse(id)
     getHouse()
   }
-
+  
   const navigate = useNavigate()
 
   return (
     <div className='property-list'>
+      <h1 className='Prooperty-list-heading'>Properties</h1>
       <table className='property-table'>
         <thead className='table-head'>
           <tr>
@@ -67,7 +64,7 @@ const PropertyList = () => {
                 <td>{data.managerEmail}</td>
                 <td><img id='property-list-image' alt='House' src={data.imageUrl}/></td>
                 <td><button onClick={()=>navigate("/EditProperty/"+data.id)}>EDIT</button>
-                <button onClick={()=>handleDelete(data.id)} >Delete</button></td>
+                <button onClick={()=>deleteHouse(data.id)} >Delete</button></td>
               </tr>
             ))
           }

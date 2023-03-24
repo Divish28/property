@@ -1,10 +1,13 @@
 import React, { useState } from 'react'
 import '../../css/AdminInput.css'
 import axios from 'axios'
+import { useNavigate } from 'react-router-dom'
 
 const AdminAdd = () => {
 
-  const [houseDetails,setHouseDetails]=useState({type:undefined,furnishedType:undefined,age:"",ownerEmail:"",description:"",category:undefined,price:"",SqFeet:"",imageUrl:"",area:"",builder:"",managerEmail:""})
+  const [houseDetails,setHouseDetails]=useState({type:"",furnishedType:"",age:"",ownerEmail:"",description:"",category:"",price:"",SqFeet:"",imageUrl:"",area:"",builder:"",managerEmail:"",brokerName:""})
+
+  const navigate = useNavigate()
 
   const handleChange = (users) => {
     setHouseDetails(()=> {
@@ -18,6 +21,7 @@ const AdminAdd = () => {
       .post("http://localhost:8000/House", registerData)
       .then((res) => {
         alert("ADDED")
+        navigate('/PropertyList')
       })
       .catch((error) => {
         alert("error:"+error.message)
@@ -28,16 +32,16 @@ const AdminAdd = () => {
     <div className='admin-input'>
         <h1 className='house-inputs'>ADD HOUSE</h1>
         <form className='input-form' onSubmit={handleSubmit}>
-            <label className='house-label'>Type:</label>
+            <label className='house-label'>House Type:</label>
             <select name='type' className='select-input' onInput={handleChange} value={houseDetails.type}>
-                <option >--select Type--</option>
+                <option value="" disabled select='true' hidden >--select Type--</option>
                 <option>1BHK</option>
                 <option>2BHK</option>
                 <option>3BHK</option>
             </select>
-            <label className='house-label'>Furnished Type:</label>
+            <label className='house-label'>Furnishing:</label>
             <select name='furnishedType' className='select-input' onInput={handleChange} value={houseDetails.furnishedType} >
-                <option>--select Type--</option>
+                <option value="" disabled select='true' hidden>--select furnished Type--</option>
                 <option>Furnished</option>
                 <option>Semi-Furnished</option>
             </select>
@@ -51,7 +55,7 @@ const AdminAdd = () => {
             <label className='house-label'>Category:</label>
             {/* <input name='ownerEmail' className='house-input' type='text' placeholder='Owner Email'/> */}
             <select name='category'onInput={handleChange} value={houseDetails.category} className='select-input'>
-                <option>--select category--</option>
+                <option value="" disabled selected hidden>--select category--</option>
                 <option>Rent</option>
                 <option>Sale</option>
             </select>
