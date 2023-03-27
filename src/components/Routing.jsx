@@ -11,6 +11,8 @@ import Home from './users/Home'
 import UserNavbar from './users/UserNavbar'
 import BrokerRegistration from './broker/BrokerRegistration'
 import MaintenanceDetails from './manager/MaintenanceDetails'
+import AdminHome from './admin/AdminHome'
+import BrokerPage from './broker/BrokerPage'
 
 const Routing = () => {
   return (
@@ -28,6 +30,8 @@ const Routing = () => {
             <Route path='/userDetails' element={<UserDetails/>}/>
             <Route path='/PropertyList' element={<PropertyList/>}/>
             <Route path='/EditProperty/:id' element={<EditProperty/>}/>
+            <Route path='/AdminHome' element={<AdminHome/>}/>
+            <Route path='/BrokerPage' element={<BrokerPage/>}/>
         </Routes>
     </div>
   )

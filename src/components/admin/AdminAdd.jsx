@@ -3,9 +3,9 @@ import '../../css/AdminInput.css'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
 
-const AdminAdd = () => {
+const AdminAdd = (area,builder) => {
 
-  const [houseDetails,setHouseDetails]=useState({type:"",furnishedType:"",age:"",ownerEmail:"",description:"",category:"",price:"",SqFeet:"",imageUrl:"",area:"",builder:"",managerEmail:"",brokerName:""})
+  const [houseDetails,setHouseDetails]=useState({type:"",furnishedType:"",age:"",ownerEmail:"",description:"",category:"",price:"",SqFeet:"",imageUrl:"",managerEmail:"",brokerName:""})
 
   const navigate = useNavigate()
 
@@ -18,7 +18,7 @@ const AdminAdd = () => {
   const handleSubmit = () => {
     let registerData = { ...houseDetails };
     axios
-      .post("http://localhost:8000/House", registerData)
+      .post(`http://localhost:8000/House`, registerData)
       .then((res) => {
         alert("ADDED")
         navigate('/PropertyList')
@@ -66,9 +66,9 @@ const AdminAdd = () => {
             <label className='house-label'>Image:</label>
             <input name='imageUrl' onInput={handleChange} value={houseDetails.imageUrl} className='house-input' type='text' placeholder='Image URL' /> 
             <label className='house-label'>Area:</label>
-            <input name='area' onInput={handleChange} value={houseDetails.area} className='house-input' type='text'/>
+            <input name='area' onInput={handleChange} value={area} className='house-input' type='text'/>
             <label className='house-label'>Builders:</label>
-            <input name='builder' onInput={handleChange} value={houseDetails.builder} className='house-input' type='text'/>
+            <input name='builder' onInput={handleChange} value={builder} className='house-input' type='text'/>
             <label className='house-label'>Manager Email:</label>
             <input name='managerEmail' onInput={handleChange} value={houseDetails.managerEmail} className='house-input' type='email'/>
             <input className='add-house-button' type='submit' value='ADD'/> 

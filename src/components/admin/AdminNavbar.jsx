@@ -7,7 +7,7 @@ const AdminNavbar = () => {
         <nav>
             <ul>
             <li><NavLink to='/PropertyList' >List</NavLink></li>
-            <li><NavLink to='/AdminAdd'>ADD</NavLink></li>
+            <li><NavLink to='/AdminAdd'>ADD House</NavLink></li>
             <li><NavLink to='/UserDetails'>User Details</NavLink></li>
             </ul>
         </nav>

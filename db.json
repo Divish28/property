@@ -1,4 +1,14 @@
 {
+  "Area":[
+    {
+      "location":"ECR",
+      "bulders":["APPASWAMY","HOUSE OF HIRANANDANI","BRIGADE ","SOBHA","G Square"]
+    },
+    {
+      "location":"OMR",
+      "bulders":["PRESTIGE GROUP","CASAGRAND","OLYMPIA GROUP","EMBASSY GROUP","AKSHAYA"]
+    }
+  ],
   "House": [
     {
       "type": "1BHK",
