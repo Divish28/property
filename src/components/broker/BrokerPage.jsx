@@ -1,31 +1,32 @@
-import axios from 'axios';
-import React, { useEffect } from 'react'
+import axios from 'axios'
+import React from 'react'
+import { useEffect } from 'react'
 import { useState } from 'react'
-import HouseCard from './HouseCard';
+import HouseCard from './HouseCard'
 
 const BrokerPage = () => {
-    const[houses,setHouses]=useState([])
-    useEffect(() => {
-        axios.get("http://localhost:8000/House")
-          .then(response => {
-            console.log(response.data)
-            setHouses(response.data);
-          })
-          .catch(error => {
-            console.log(error);
-          });
-      }, []);
-      
+
+    const[houseData,setHouseData]=useState([])
+
+    const getHouseData=async()=>{
+        await axios.get("http://localhost:8000/House").then((response)=>{
+            setHouseData(response.data)
+        }).catch(error=>alert(error.message))
+    }
+    useEffect(()=>{
+        getHouseData()
+    },[])
+
+
   return (
     <div>
         <h1>Broker Page</h1>
         {
-            houses.map((house)=>{
-                <HouseCard key={house.id} house={house}/>
-            })
-        }
-    </div>
-  )
+            houseData.map((Data)=>(
+                <HouseCard key={Data.id} house={Data}/>
+            ))
+          }
+</div>)
 }
 
 export default BrokerPage

@@ -98,11 +98,6 @@ const AdminHome = () => {
             {renderBuilderOptions()}
           </select>
         </label>
-        {/* {selectedArea && selectedBuilder && (
-          <p>
-            You have selected {selectedBuilder} in {selectedArea}.
-          </p>
-        )} */}
       </div>
     
     // <div>

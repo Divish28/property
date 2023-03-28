@@ -9,7 +9,7 @@ const Login = () => {
 
   const validate = ()=>{
     let result = true;
-    if(email == "" && password == ""){
+    if(email === "" && password === ""){
       result="false"
       alert("Enter the credentials")
     }
@@ -43,7 +43,7 @@ const Login = () => {
               sessionStorage.setItem("session data", email);
             }
             else if(response[0].role === "broker"){
-              navigate('/BrokerRegistration')
+              navigate('/BrokerPage')
               sessionStorage.setItem("session data", email);
             }
             else{
