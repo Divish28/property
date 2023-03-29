@@ -1,6 +1,6 @@
 import { combineReducers } from "redux";
-import {reducer} from './reducer'
+import {blocklist} from './reducer'
 
-const rootReducer=combineReducers({reducer})
+const rootReducer=combineReducers({blocklist})
 
 export default rootReducer

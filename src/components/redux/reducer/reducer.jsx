@@ -1,6 +1,6 @@
-const initialState = {houseData:[],blockedHouse:[]};
+const initialState = {houseData:[],blockedHouse:[],bookedHouse:[]};
 
-const reducer = (state = initialState, action) => {
+export const blocklist = (state = initialState, action) => {
   switch (action.type) {
     case 'SET_DATA':
       return { ...state, houseData: action.payload };
@@ -8,6 +8,8 @@ const reducer = (state = initialState, action) => {
         return{...state,blockedHouse:[...state.blockedHouse,action.payload] }
     case 'DELETE_BLOCKED_HOUSE':
         return{...state,blockedHouse:[state.blockedHouse.filter((e)=>e.id!==action.payload)]}
+    case 'BOOK_HOUSE':
+      return{...state,bookedHouse:[...state.bookedHouse.filter((e)=>e.id!==action.payload),action.payload] }
     default:
       return state;
   }

@@ -18,3 +18,10 @@ export const deleteHouse =(deletedHouse)=>{
         payload:deletedHouse
     }
 }
+
+export const bookHouse =(Booked)=>{
+    return{
+        type:"BOOK_HOUSE",
+        payload:Booked
+    }
+}

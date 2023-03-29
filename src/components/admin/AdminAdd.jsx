@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom'
 
 const AdminAdd = (area,builder) => {
 
-  const [houseDetails,setHouseDetails]=useState({type:"",furnishedType:"",age:"",ownerEmail:"",description:"",category:"",price:"",SqFeet:"",imageUrl:"",managerEmail:"",brokerName:""})
+  const [houseDetails,setHouseDetails]=useState({type:"",furnishedType:"",age:"",ownerEmail:"",description:"",category:"",price:"",SqFeet:"",imageUrl:"",area:"",builder:"",managerEmail:"",brokerName:""})
 
   const navigate = useNavigate()
 

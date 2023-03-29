@@ -5,26 +5,16 @@ import AdminAdd from './AdminAdd'
 
 const AdminHome = () => {
 
-  // const areaData = [
-  //   {
-  //     "location": "ECR",
-  //     "builders": ["APPASWAMY", "HOUSE OF HIRANANDANI", "BRIGADE ", "SOBHA", "G Square"]
-  //   },
-  //   {
-  //     "location": "OMR",
-  //     "builders": ["PRESTIGE GROUP", "CASAGRAND", "OLYMPIA GROUP", "EMBASSY GROUP", "AKSHAYA"]
-  //   }
-  // ];
-
   const [areaData,setAreaData]=useState([])
-  const [selectedArea,setSelectedArea]=useState("")
-  const [selectedBuilder, setSelectedBuilder] = useState("");
+  const [selectedArea,setSelectedArea]=useState(null)
+  const [selectedBuilder, setSelectedBuilder] = useState(null);
 
   useEffect(()=>{
     getArea()
+    handleSubmit()
   },[])
 
-  const getArea =()=>{
+ const getArea =()=>{
      axios.get("http://localhost:8000/Area").then((response)=>{
       console.log(response.data)
       setAreaData(response.data)
@@ -43,13 +33,12 @@ const AdminHome = () => {
   
   const handleAreaChange = (event) => {
     setSelectedArea(event.target.value);
-    // setSelectedBuilder('');
+    setSelectedBuilder('');
   };
   
   const renderBuilderOptions = () => {
     const selectedAreaData = areaData.find((area) => area.location === selectedArea);
     if (selectedAreaData) {
-      console.log(selectedAreaData.builders)
       return selectedAreaData.builders.map((builder) => (
         <option key={builder} value={builder}>
           {builder}
@@ -59,20 +48,10 @@ const AdminHome = () => {
       return null;
     }
   };
-  // const renderBuilderOptions = () => {
-  //   const selectedAreaData = areaData.find(area => area.location === selectedArea);
-  //   if (selectedAreaData && selectedAreaData.builders) {
-  //     return selectedAreaData.builders.map(builder => (
-  //       <option key={builder} value={builder}>
-  //         {builder}
-  //       </option>
-  //     ));
-  //   } else {
-  //     return null;
-  //   }
-  // };
+
 
   const handleBuilderChange = (event) => {
+    console.log(event.target.value)
     setSelectedBuilder(event.target.value);
   };
   
@@ -87,40 +66,20 @@ const AdminHome = () => {
         <label>
           Select Area:
           <select value={selectedArea} onChange={handleAreaChange}>
-            <option value="">--Select--</option>
+            <option value="" selected disabled hidden>--Select Area--</option>
             {renderAreaOptions()}
           </select>
         </label>
         <label>
           Select Builder:
           <select value={selectedBuilder} onChange={handleBuilderChange}>
-            <option value="">--Select--</option>
+            <option value="" selected disabled hidden>--Select builder--</option>
             {renderBuilderOptions()}
           </select>
         </label>
+        <button onSubmit={handleSubmit}>Add</button>
+        <AdminAdd area={selectedArea} builder={selectedBuilder}/>
       </div>
-    
-    // <div>
-    //   <select onChange={(e) => setSelectedArea(e.target.value)}>
-    //     <option value="" >Select an area</option>
-    //     {
-    //       areaData.map((area) => (
-    //         <option value={area.location}>{area.location}</option>
-    //       ))
-    //     }
-    //   </select>
-    //   <select disabled={!selectedArea} onChange={(e) => setSelectedBuilder(e.target.value)}>
-    //     <option value="">Select a builder</option>
-    //     {
-    //       selectedArea &&
-    //       areaData
-    //       .find((area) => area.location === selectedArea)
-    //       .builders.map((builder) => (
-    //       <option value={builder}>{builder}</option>
-    //       ))
-    //     }
-    //   </select>
-    // </div>
   )
 }
 
