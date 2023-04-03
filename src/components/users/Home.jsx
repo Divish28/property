@@ -12,7 +12,7 @@ const Home = () => {
         </select>
         <label>Broker:</label>
         <select className='broker-filter'>
-            <option value="" disabled selected hidden>--SELECT BROKER</option>
+            <option value="" disabled selected hidden>--SELECT BROKER--</option>
             <option></option>
         </select>
         </form>

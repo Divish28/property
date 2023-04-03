@@ -10,10 +10,14 @@ const HouseCard = ({house}) => {
   const handleBlock= (e)=>{
     dispatch(blockHouse(e))
   }
+  const blocklist =  useSelector(
+    (state) => state.blocklist.blockedHouse
+  );
+
   const navigate=useNavigate()
     return (
         <div className="card">
-          <img onClick={()=>navigate('/PropertyList')} src={house.imageUrl} alt="House" />
+          <img onClick={()=>navigate('/HouseDetails/'+house.id)} src={house.imageUrl} alt="House" />
           <div className="card-body">
             <h3 className='card-title'>Builder: {house.builder}</h3>
             <h4 className="card-title">Type: {house.type}</h4>

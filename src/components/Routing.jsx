@@ -13,12 +13,13 @@ import MaintenanceDetails from './manager/MaintenanceDetails'
 import AdminHome from './admin/AdminHome'
 import BrokerPage from './broker/BrokerPage'
 import HouseCard from './broker/HouseCard'
+import HouseDetail from './broker/HouseDetail'
 
 const Routing = () => {
   return (
     <div>
       {/* <AdminNavbar/> */}
-      <UserNavbar/>
+      {/* <UserNavbar/> */}
         <Routes>
             <Route path='/' element={<Login/>}/>
             <Route path='/Login' element={<Login/>}/>
@@ -32,6 +33,7 @@ const Routing = () => {
             <Route path='/AdminHome' element={<AdminHome/>}/>
             <Route path='/HouseCard' element={<HouseCard/>}/>
             <Route path='/BrokerPage' element={<BrokerPage/>}/>
+            <Route path='/HouseDetails/:id' element={<HouseDetail/>}/>
         </Routes>
     </div>
   )

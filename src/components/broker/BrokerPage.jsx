@@ -2,13 +2,14 @@ import axios from 'axios'
 import React from 'react'
 import { useEffect } from 'react'
 import { useState } from 'react'
+import BrokerNavbar from './BrokerNavbar'
 import HouseCard from './HouseCard'
 
 const BrokerPage = () => {
 
-    const[houseData,setHouseData]=useState([])
+    const [houseData,setHouseData]=useState([])
     const [areaData,setAreaData]=useState([])
-    const[filteredData,setFilteredData] = useState([])
+    const [filteredData,setFilteredData] = useState([])
     const [selectedArea,setSelectedArea]=useState("")
     const [selectedBuilder, setSelectedBuilder] = useState("");
 
@@ -78,29 +79,31 @@ const BrokerPage = () => {
 
   return (
     <div>
-        <h1>Broker Page</h1>
-        <label>
-          Select Area:
-          <select value={selectedArea} onChange={handleAreaChange}>
-            <option value="" selected disabled hidden>--Select Area--</option>
-            {renderAreaOptions()}
-          </select>
-        </label>
-        <label>
-          Select Builder:
-          <select value={selectedBuilder} onChange={handleBuilderChange}>
-            <option value="" selected disabled hidden>--Select builder--</option>
-            {renderBuilderOptions()}
-          </select>
-        </label>
-        <div>
+      <BrokerNavbar/>
+      <h1>Broker Page</h1>
+      <label>
+        Select Area:
+        <select value={selectedArea} onChange={handleAreaChange}>
+          <option value="" selected disabled hidden>--Select Area--</option>
+          {renderAreaOptions()}
+        </select>
+      </label>
+      <label>
+        Select Builder:
+        <select value={selectedBuilder} onChange={handleBuilderChange}>
+          <option value="" selected disabled hidden>--Select builder--</option>
+          {renderBuilderOptions()}
+        </select>
+      </label>
+      <div>
         {
-            houseData.map((Data)=>(
-                <HouseCard key={Data.id} house={Data}/>
-            ))
-          }
-          </div>
-</div>)
+          houseData.map((Data)=>(
+              <HouseCard key={Data.id} house={Data}/>
+          ))
+        }
+      </div>
+  </div>
+)
 }
 
 export default BrokerPage

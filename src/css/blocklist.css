@@ -1,0 +1,10 @@
+.blocklist{
+    background-color: red;
+    color: white;
+    padding: 5px;
+    border-radius: 50%;
+    font-size: 12px;
+    position: absolute;
+    top: -5px;
+    right: -5px;
+}
