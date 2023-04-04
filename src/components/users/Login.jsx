@@ -47,6 +47,7 @@ const Login = () => {
                 navigate('/ManagerDetails')
             }
             sessionStorage.setItem("session data", email);
+            sessionStorage.setItem("role",response[0].role)
           }else {
             alert("enter correct password")
           }}

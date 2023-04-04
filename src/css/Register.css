@@ -31,3 +31,9 @@ input#user-radio{
 input#broker-radio{
     display: inline-block;
 }
+.error-message{
+    display: table;
+    margin: auto;
+    color: darkred;
+    font-size: small;
+}
