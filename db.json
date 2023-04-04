@@ -1,12 +1,24 @@
 {
-  "Area":[
+  "Area": [
     {
-      "location":"ECR",
-      "builders":["APPASWAMY","HOUSE OF HIRANANDANI","BRIGADE ","SOBHA","G Square"]
+      "location": "ECR",
+      "builders": [
+        "APPASWAMY",
+        "HOUSE OF HIRANANDANI",
+        "BRIGADE",
+        "SOBHA",
+        "G Square"
+      ]
     },
     {
-      "location":"OMR",
-      "builders":["PRESTIGE GROUP","CASAGRAND","OLYMPIA GROUP","EMBASSY GROUP","AKSHAYA"]
+      "location": "OMR",
+      "builders": [
+        "PRESTIGE GROUP",
+        "CASAGRAND",
+        "OLYMPIA GROUP",
+        "EMBASSY GROUP",
+        "AKSHAYA"
+      ]
     }
   ],
   "House": [
@@ -54,14 +66,44 @@
       "builder": "Akshaya",
       "managerEmail": "Charan@gmail.com",
       "id": 3
+    },
+    {
+      "type": "2BHK",
+      "furnishedType": "Semi-Furnished",
+      "age": "4",
+      "ownerEmail": "Arun@gmail.com",
+      "description": "East facing house with good ventilation",
+      "category": "Rent",
+      "price": "20000",
+      "SqFeet": "1135",
+      "imageUrl": "https://assets.architecturaldigest.in/photos/600845f5e6e1f64740189662/16:9/w_2560%2Cc_limit/Mumbai-2-BHK-Limehouse-Design-Studio-1366x768.jpg",
+      "area": "ECR",
+      "builder": "BRIGADE",
+      "managerEmail": "Karthick@gmail.com",
+      "id": 4
+    },
+    {
+      "type": "",
+      "furnishedType": "",
+      "age": "",
+      "ownerEmail": "",
+      "description": "",
+      "category": "",
+      "price": "",
+      "SqFeet": "",
+      "imageUrl": "",
+      "area": "",
+      "builder": "",
+      "managerEmail": "",
+      "id": 5
     }
   ],
   "user": [
     {
-      "email":"Admin@gmail.com",
-      "mobileNumber":"8056615848",
-      "password":"admin@property.com",
-      "role":"admin"
+      "email": "Admin@gmail.com",
+      "mobileNumber": "8056615848",
+      "password": "admin@property.com",
+      "role": "admin"
     },
     {
       "email": "divish@gmail.com",

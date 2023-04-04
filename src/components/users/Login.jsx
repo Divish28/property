@@ -36,20 +36,17 @@ const Login = () => {
           if (response[0].password === password) {
             if(response[0].role === "admin"){
               navigate('/PropertyList')
-              sessionStorage.setItem("session data", email);
             }
             else if(response[0].role === "user"){
               navigate('/Home')
-              sessionStorage.setItem("session data", email);
             }
             else if(response[0].role === "broker"){
               navigate('/BrokerPage')
-              sessionStorage.setItem("session data", email);
             }
             else{
                 navigate('/ManagerDetails')
-                sessionStorage.setItem("session data", email);
             }
+            sessionStorage.setItem("session data", email);
           }else {
             alert("enter correct password")
           }}

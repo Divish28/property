@@ -1,6 +1,5 @@
 import axios from 'axios'
 import React from 'react'
-import { useEffect } from 'react'
 import { useState } from 'react'
 import { useParams } from 'react-router-dom'
 
@@ -19,10 +18,9 @@ const HouseDetail = () => {
     }
 
   return (
-    <div className='card'>
+    <div className='details-card'>
+      <h1>House Detail</h1>
       <table>
-        <h1>House Detail</h1>
-        <tbody>
           {
             HouseDetails.map((data)=>{
               <tr key={data.id}>
@@ -40,7 +38,6 @@ const HouseDetail = () => {
               </tr>
             })
           }
-        </tbody>
       </table>
     </div>
   )

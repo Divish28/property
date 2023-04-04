@@ -33,7 +33,7 @@ const AdminHome = () => {
   
   const handleAreaChange = (event) => {
     setSelectedArea(event.target.value);
-    setSelectedBuilder('');
+    // setSelectedBuilder('');
   };
   
   const renderBuilderOptions = () => {
@@ -78,7 +78,7 @@ const AdminHome = () => {
           </select>
         </label>
         <button onSubmit={handleSubmit}>Add</button>
-        <AdminAdd area={selectedArea} builder={selectedBuilder}/>
+        {/* <AdminAdd area={selectedArea} builder={selectedBuilder}/> */}
       </div>
   )
 }
