@@ -1,6 +1,17 @@
+import axios from 'axios'
 import React from 'react'
+import { useState } from 'react'
 
 const Home = () => {
+
+  const [broker,setBroker]= useState()
+  const [detail,setDetails]=useState()
+
+  const details  = ()=>{
+    axios.get("http://localhost:8000/House").then((response)=>{
+      setDetails(response.data)
+    })
+  }
   return (
     <div>
         <form className='filter-form'>

@@ -19,18 +19,19 @@ const BrokerPage = () => {
     },[])
 
     useEffect(()=>{
-      filter();
+      filterHouse();
   },[selectedArea, selectedBuilder]);
 
     const getHouseData=async()=>{
         await axios.get("http://localhost:8000/House").then((response)=>{
+          console.log(houseData)
             setHouseData(response.data)
         }).catch(error=>alert(error.message))
     }
     
      const getArea =()=>{
          axios.get("http://localhost:8000/Area").then((response)=>{
-          console.log(response.data)
+          // console.log(response.data)
           setAreaData(response.data)
         }).catch((error)=>{
           alert(error.message)
@@ -68,34 +69,34 @@ const BrokerPage = () => {
         setSelectedBuilder(event.target.value);
       };
 
-      const filter = () => {
-        if (selectedArea && selectedBuilder) {
-          const filteredData = houseData.filter((filteredHouse) => {
-            return filteredHouse.location === selectedArea &&
-              filteredHouse.builder === selectedBuilder;
-          });
-          setFilteredData(filteredData);
-        } else if (selectedArea && !selectedBuilder) {
-          const filteredData = houseData.filter((filteredHouse) => {
-            return filteredHouse.location === selectedArea;
-          });
-          setFilteredData(filteredData);
-        } else {
-          setFilteredData([]);
-        }
-      }
-
-      // const filter = ()=>{
-      //   if(selectedBuilder !==0){
+      // const filterHouse = () => {
+      //   if (selectedArea && selectedBuilder) {
       //     const filteredData = houseData.filter((filteredHouse) => {
-      //       return Object.values(filteredHouse)
-      //         .join("")
-      //         .toLowerCase()
-      //         .includes(selectedBuilder.toLowerCase());
+      //       return filteredHouse.location === selectedArea &&
+      //         filteredHouse.builder === selectedBuilder ? "true" : "false" ;
       //     });
-      //       setFilteredData(filteredData);
+      //     setFilteredData(filteredData);
+      //   } else if (selectedArea && !selectedBuilder) {
+      //     const filteredData = houseData.filter((filteredHouse) => {
+      //       return filteredHouse.location === selectedArea;
+      //     });
+      //     setFilteredData(filteredData);
+      //   } else {
+      //     setFilteredData([]);
       //   }
       // }
+
+      const filterHouse = ()=>{
+        if(selectedBuilder !==0){
+          const filteredData = houseData.filter((filteredHouse) => {
+            return Object.values(filteredHouse)
+              .join("")
+              .toLowerCase()
+              .includes(selectedBuilder.toLowerCase());
+          });
+            setFilteredData(filteredData);
+        }
+      }
 
 
   return (
@@ -105,14 +106,14 @@ const BrokerPage = () => {
       <label>
         Select Area:
         <select value={selectedArea} onChange={handleAreaChange}>
-          <option value="" selected disabled hidden>--Select Area--</option>
+          <option value="" disabled select='true' hidden>--Select Area--</option>
           {renderAreaOptions()}
         </select>
       </label>
       <label>
         Select Builder:
         <select value={selectedBuilder} onChange={handleBuilderChange}>
-          <option value="" selected disabled hidden>--Select builder--</option>
+          <option value="" select='true' >--Select builder--</option>
           {renderBuilderOptions()}
         </select>
       </label>
@@ -121,9 +122,7 @@ const BrokerPage = () => {
           filteredData.map((Data)=>(
               <HouseCard key={Data.id} house={Data}/>
           )):
-          houseData.map((Data)=>(
-              <HouseCard key={Data.id} house={Data}/>
-          ))
+          <h1>Select the Area and Builders.</h1>
         }
       </div>
   </div>

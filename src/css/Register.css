@@ -35,5 +35,5 @@ input#broker-radio{
     display: table;
     margin: auto;
     color: darkred;
-    font-size: small;
+    font-size: smaller;
 }

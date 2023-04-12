@@ -1,6 +1,7 @@
 import axios from 'axios'
 import React, { useState } from 'react'
 import { useEffect } from 'react'
+import { useNavigate } from 'react-router-dom'
 import AdminAdd from './AdminAdd'
 
 const AdminHome = () => {
@@ -11,7 +12,6 @@ const AdminHome = () => {
 
   useEffect(()=>{
     getArea()
-    handleSubmit()
   },[])
 
  const getArea =()=>{
@@ -55,14 +55,15 @@ const AdminHome = () => {
     setSelectedBuilder(event.target.value);
   };
   
-  
+  const navigate = useNavigate()
 
   const handleSubmit = () =>{
-    <AdminAdd area={selectedArea} builder={selectedBuilder}/>
+    navigate('/AdminAdd')
   }
 
   return(
       <div>
+        <form onSubmit={handleSubmit}>
         <label>
           Select Area:
           <select value={selectedArea} onChange={handleAreaChange}>
@@ -77,8 +78,9 @@ const AdminHome = () => {
             {renderBuilderOptions()}
           </select>
         </label>
-        <button onSubmit={handleSubmit}>Add</button>
+        <button>Add</button>
         {/* <AdminAdd area={selectedArea} builder={selectedBuilder}/> */}
+        </form>
       </div>
   )
 }

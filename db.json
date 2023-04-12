@@ -33,7 +33,7 @@
       "SqFeet": "900",
       "imageUrl": "https://mediacdn.99acres.com/media1/20128/0/402560276M-1674029805699.jpg",
       "area": "ECR",
-      "builder": "Appaswami",
+      "builder": "Appaswamy",
       "managerEmail": "Kavi@gmail.com",
       "id": 1
     },
@@ -81,21 +81,6 @@
       "builder": "BRIGADE",
       "managerEmail": "Karthick@gmail.com",
       "id": 4
-    },
-    {
-      "type": "",
-      "furnishedType": "",
-      "age": "",
-      "ownerEmail": "",
-      "description": "",
-      "category": "",
-      "price": "",
-      "SqFeet": "",
-      "imageUrl": "",
-      "area": "",
-      "builder": "",
-      "managerEmail": "",
-      "id": 5
     }
   ],
   "user": [
